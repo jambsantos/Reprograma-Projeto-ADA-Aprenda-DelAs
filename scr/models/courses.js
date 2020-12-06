@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 const coursesSchema = new mongoose.Schema({
-  nome: { type: String },
-  realizadora: { type: String },
-  categoria: {type: String },
+  name: { type: String },
+  host: { type: String },
+  category: {type: String },
   link: {type:String },
-  gratuito: { type: Boolean },
-  localDoLink: {type: String },
+  free: { type: Boolean },
+  community: {type: Boolean },
 }, {
   versionKey: false
 });

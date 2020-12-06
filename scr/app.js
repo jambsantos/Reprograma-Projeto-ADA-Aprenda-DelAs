@@ -23,9 +23,9 @@ const users = require('./routes/usersRoute');
 const courses = require('./routes/coursesRoute');
 
 
-app.use('/', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header(
+app.use('/', (request, response, next) => {
+  response.header('Access-Control-Allow-Origin', '*');
+  response.header(
     'Access-Control-Alow-Headers',
     'Origin', 'X-Request-With', 'Content-Type', 'Accept'
   );

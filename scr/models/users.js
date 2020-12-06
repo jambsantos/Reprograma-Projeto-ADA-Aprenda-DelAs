@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
-const { coursesSchema } = require('./cursos');
+const { coursesSchema } = require('./courses');
 
 const usersSchema = new mongoose.Schema({
   id:{ type: Number },
-  nome: { type: String },
+  name: { type: String },
   tagArea:{ type: String },
   contacts: { type: Number },
   email: { type: String },
-  senha: { type: String },
-  cursos: [coursesSchema]
+  password: { type: String },
+  courses: [coursesSchema]
 }, {
   versionKey: false
 });
