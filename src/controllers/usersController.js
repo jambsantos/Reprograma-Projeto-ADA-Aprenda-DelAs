@@ -14,14 +14,14 @@ const createNewUsers = (request, response) => {
   });
 };
 
-const getAllUsers = (request, response) => {
-   users.find(function(err, users){
-    if(err) {
-    response.status(500).send({ message: err.message })
-    }
-    response.status(200).send(users)
-  });
- };
+// const getAllUsers = (request, response) => {
+//    users.find(function(err, users){
+//     if(err) {
+//     response.status(500).send({ message: err.message })
+//     }
+//     response.status(200).send(users)
+//   });
+//  };
 
 // const loginUsers = (request, response) => {
 //   users.findOne({ email: request.body.email }, function(error, user) {
@@ -41,7 +41,7 @@ const getAllUsers = (request, response) => {
 // }
 
 module.exports = {
-    getAllUsers,
+    //getAllUsers,
     createNewUsers,
     //loginUsers
 }

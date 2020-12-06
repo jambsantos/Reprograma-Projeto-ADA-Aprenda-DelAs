@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const usersSchema = new mongoose.Schema({
-  id:{ type: Number },
+  id: { type: Number },
   name: { type: String },
-  tagCategory:{ type: Array },
-  contacts: { type: Number },
+  tagCategory: { type: Array },
+  contacts: { type: String },
   email: { type: String },
   password: { type: String }
 }, {
