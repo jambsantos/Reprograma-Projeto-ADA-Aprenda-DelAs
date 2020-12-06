@@ -40,7 +40,7 @@ courses.coursesModel.find({ id }, (error, course) => {
         }
       );
     } else {
-      return response.status(400).send({ message: "Course not update" });
+      return response.status(200).send({ message: "Não existe cursos para atualizar" });
     }
   });
 };
@@ -56,7 +56,7 @@ const deleteCourses = (request, response) => {
         return response.status(200).send({message: "courses successfully deleted",});
       });
     } else {
-      return response.status(400).send({message: "There are no courses" });
+      return response.status(200).send({message: "Não existe cursos para deletar" });
     }
   });
 };
