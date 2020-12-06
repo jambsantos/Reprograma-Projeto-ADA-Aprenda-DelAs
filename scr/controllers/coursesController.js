@@ -14,7 +14,7 @@ const getAllCourses = (request, response) => {
 
 const createNewCourses = (request, response) => {
   const course = new courses.coursesModel(request.body);
-  console.log(request.body);
+ 
 course.save((error) => {
     if (error) {
       return response.status(500).send({message: error.message,});
@@ -40,7 +40,7 @@ courses.coursesModel.find({ id }, (error, course) => {
         }
       );
     } else {
-      return response.status(200).send({ message: "Não registros com esse id para serem atualizados" });
+      return response.status(400).send({ message: "Course not update" });
     }
   });
 };
@@ -56,7 +56,7 @@ const deleteCourses = (request, response) => {
         return response.status(200).send({message: "courses successfully deleted",});
       });
     } else {
-      return response.status(200).send({message: "There are no courses" });
+      return response.status(400).send({message: "There are no courses" });
     }
   });
 };
