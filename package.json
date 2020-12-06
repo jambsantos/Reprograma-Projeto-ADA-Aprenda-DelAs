@@ -20,6 +20,7 @@
   "homepage": "https://github.com/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
     "dotenv-safe": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",

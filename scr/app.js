@@ -1,10 +1,7 @@
 require('dotenv-safe').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require("body-parser");
 const app = express();
-
-app.use(bodyParser.json());
 
 mongoose.connect(`${process.env.MONGODB_URL}`, {
   useNewUrlParser: true,
@@ -12,16 +9,16 @@ mongoose.connect(`${process.env.MONGODB_URL}`, {
 });
 
 const db = mongoose.connection;
-
 db.on('error', console.log.bind(console, 'connection error:'));
 db.once('open', () => {
   console.info('Successful connection');
 });
 
+app.use(express.json());
+
 const index = require('./routes/index');
 const users = require('./routes/usersRoute');
 const courses = require('./routes/coursesRoute');
-
 
 app.use('/', (request, response, next) => {
   response.header('Access-Control-Allow-Origin', '*');
