@@ -1,18 +1,14 @@
 const mongoose = require('mongoose');
-const { coursesSchema } = require('./courses');
 
 const usersSchema = new mongoose.Schema({
   id:{ type: Number },
   name: { type: String },
-  tagArea:{ type: String },
+  tagCategory:{ type: Array },
   contacts: { type: Number },
   email: { type: String },
-  password: { type: String },
-  courses: [coursesSchema]
+  password: { type: String }
 }, {
   versionKey: false
 });
 
-const usersModel = mongoose.model('users', usersSchema);
-
-module.exports = { usersModel, usersSchema };
+module.exports = mongoose.model('users', usersSchema);

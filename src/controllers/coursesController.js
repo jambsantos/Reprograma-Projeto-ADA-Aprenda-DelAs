@@ -3,7 +3,7 @@ const SECRET = process.env.SECRET;
 const jwt = require("jsonwebtoken");
 
 const getAllCourses = (request, response) => {
- courses.coursesModel.find((error, course) => {
+ courses.courses.find((error, course) => {
     if (error) {
       return response.status(500).send({ message: error.message });
     } else {
@@ -13,7 +13,7 @@ const getAllCourses = (request, response) => {
 };
 
 const createNewCourses = (request, response) => {
-  const course = new courses.coursesModel(request.body);
+  const course = new courses.courses(request.body);
  
 course.save((error) => {
     if (error) {
@@ -27,9 +27,9 @@ course.save((error) => {
 const updateCourses = (request, response) => {
   const id = request.params.id;
 
-courses.coursesModel.find({ id }, (error, course) => {
+courses.courses.find({ id }, (error, course) => {
     if (course.length > 0) {
-      courses.coursesModel.updateMany(
+      courses.courses.updateMany(
         { id },
         { $set: request.body },
         (error) => {
@@ -47,9 +47,9 @@ courses.coursesModel.find({ id }, (error, course) => {
 
 const deleteCourses = (request, response) => {
   const id = request.params.id;
-  courses.coursesModel.find({ id }, (error, course) => {
+  courses.courses.find({ id }, (error, course) => {
     if (course.length > 0) {
-        courses.coursesModel.deleteMany({ id }, (error) => {
+        courses.courses.deleteMany({ id }, (error) => {
         if (error) {
           return response.status(500).send({ message: erro});
         }

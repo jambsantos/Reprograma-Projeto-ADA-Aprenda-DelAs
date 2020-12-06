@@ -6,11 +6,9 @@ const coursesSchema = new mongoose.Schema({
   category: {type: String },
   link: {type:String },
   free: { type: Boolean },
-  community: {type: Boolean },
+  community: {type: Boolean }
 }, {
   versionKey: false
 });
 
-const coursesModel = mongoose.model('Courses', coursesSchema);
-
-module.exports = { coursesModel, coursesSchema};
+module.exports = mongoose.model('courses', coursesSchema);
