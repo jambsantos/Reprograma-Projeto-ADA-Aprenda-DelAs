@@ -17,7 +17,7 @@ const createNewCourses = (request, response) => {
  
 course.save((error) => {
     if (error) {
-      return response.status(500).send({message: error.message,});
+      return response.status(424).send({message: error.message,});
     } else {
       return response.status(201).send(course.toJSON());
     }
