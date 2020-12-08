@@ -4,9 +4,9 @@ const usersSchema = new mongoose.Schema({
   id: { type: Number },
   name: { type: String },
   tagCategory: { type: Array },
-  contacts: { type: String },
+  contact: { type: String },
   email: { type: String },
-  password: { type: String }
+  password: { type: String },
 }, {
   versionKey: false
 });

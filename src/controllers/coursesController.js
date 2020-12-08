@@ -1,4 +1,4 @@
-const courses = require("../models/courses");
+const courses = require("../models/coursesSchema");
 const SECRET = process.env.SECRET;
 const jwt = require("jsonwebtoken");
 
