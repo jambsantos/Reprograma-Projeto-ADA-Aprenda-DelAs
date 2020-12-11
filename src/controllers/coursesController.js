@@ -2,7 +2,7 @@ const courses = require("../models/coursesSchema");
 const SECRET = process.env.SECRET;
 const jwt = require("jsonwebtoken");
 
-const getAllCourses = (request, response) => {
+const readAllCourses = (request, response) => {
  courses.courses.find((error, course) => {
     if (error) {
       return response.status(500).send({ message: error.message });
@@ -61,9 +61,71 @@ const deleteCourses = (request, response) => {
   });
 };
 
+// const getTipyCourses = (req, res) => {
+//   const parametros = req.query
+//   articles.find(parametros, function (err, articles) {
+//       if (err) {
+//           res.status(500).send({ message: err.message })
+//       } else {
+//           res.status(200).send(articles)
+//       }
+//   })
+// }
+
+
+// const candidateById = (req, res) => {
+//   const id = req.params.id;
+//   candidatesModel.findById(id, (err, candidate) => {
+//     if (err) {
+//       res.status(424).send({ message: err.message });
+//     } else if (candidate) {
+//       return res.status(200).send(candidate);
+//     }
+//     res.status(404).send("Candidate not found!");
+//   });
+// };
+
+// const candidatesByCity = (req, res) => {
+//   const city = req.params.cidade;
+//   candidatesModel.find(
+//     { cidade: city },
+//     { nomeSocial: 1, email: 1, movimentoSocial: 1, partido: 1, _id: 0 },
+//     (err, candidates) => {
+//       if (err) {
+//         return res.status(424).send({ message: err.message });
+//       } else if (candidates) {
+//         return res.status(200).send(candidates);
+//       }
+//       res.status(404).send("City not found!");
+//     }
+//   );
+// };
+
+// const electedCandidates = (req, res) => {
+//   candidatesModel.find(
+//     { eleita: true },
+//     { nomeSocial: 1, cidade: 1, tipoCandidatura: 1, partido: 1, _id: 0 },
+//     (err, candidates) => {
+//       if (err) {
+//         return res.status(424).send({ message: err.message });
+//       } else if (candidates) {
+//         return res.status(200).send(candidates);
+//       }
+//       res.status(404).send("Candidates not found!");
+//     }
+//   );
+// };
+
+
 module.exports = {
-  getAllCourses,
+  readAllCourses,
   createNewCourses,
+  //readByIDCourses,
   updateCourses,
   deleteCourses,
+  //getTipyCourses,
+  //getFieldCourses,
+  //getLevelCourses,
+  //getFreeCourses,
+  //getCommunityCourses
 };
