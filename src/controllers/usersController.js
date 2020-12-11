@@ -3,6 +3,23 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
 
+// const loginUsers = (request, response) => {
+//   users.findOne({ email: request.body.email }, function(error, user) {
+//     if (!user) {
+//       return response.status(404).send(`Email not found ${request.body.email}`);
+//     }
+//     const validaPassword = bcrypt.compareSync(request.body.passWord, user.passWord);
+
+//     if (!validaPassword) {
+//       return response.status(403).send('invalid password');
+//     }
+
+//     const token = jwt.sign({ email: request.body.email }, SECRET);
+
+//     return response.status(200).send(token);
+//   });
+// }
+
 
 const getAllUsers = (request, response) => {
   users.find(function(err, user){
@@ -68,23 +85,21 @@ const deleteUsers = (request, response) => {
     }
   });
 };
-//http://localhost:8080/users/field?tagField=Dados
+
 const getTagFieldUser = (request, response) => {
-  const tagField = request.query.tagField
-  console.log(tagField)
-  users.find({tagField}, function (err, users) {
+  const field = request.query.tagField
+  users.find({tagField: field}, function (err, user) {
       if (err) {
           response.status(500).send({ message: err.message })
       } else {
-          response.status(200).send(users)
+          response.status(200).send(user)
       }
   });
 };
 
-
 const getTagLevelUser= (request, response) => {
-  const tagLevel = request.
- users.find(tagLevel, function (err, user) {
+  const level = request.query.tagLevel
+ users.find({tagLevel:level}, function (err, user) {
       if (err) {
           response.status(500).send({ message: err.message })
       } else {
@@ -94,33 +109,15 @@ const getTagLevelUser= (request, response) => {
 };
 
 const updateLevel = (request, response) => {
-  const level = request.params.
- users.update({ level }, { $set : request.body}, function (err) {
+  const level = request.query.tagLevel
+ users.updateMany({tagLevel:level }, { $set : request.body}, function (err) {
     if (err) {
-        response.status(500).send({ message: err.message })
+      response.status(500).send({ message: err.message })
     } else {
-      response.status(200).send({ message: "Level user updated succesfuly!"})
+      response.status(200).send({ message: "Level updated succesfuly!"})
     }
   });  
 };
-
-// const loginUsers = (request, response) => {
-//   users.findOne({ email: request.body.email }, function(error, user) {
-//     if (!user) {
-//       return response.status(404).send(`Não existe colaboradora com o email ${request.body.email}`);
-//     }
-//     const validaPassword = bcrypt.compareSync(request.body.passWord, user.passWord);
-
-//     if (!validaPassword) {
-//       return response.status(403).send('invalid password');
-//     }
-
-//     const token = jwt.sign({ email: request.body.email }, SECRET);
-
-//     return response.status(200).send(token);
-//   });
-// }
-
 
 module.exports = {
     getAllUsers,
