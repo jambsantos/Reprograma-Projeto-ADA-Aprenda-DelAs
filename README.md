@@ -1,15 +1,11 @@
 [![Deploy on heroku](https://img.shields.io/badge/deploy-heroku.com-blueviolet)](https://app-aprendadelas.herokuapp.com/)
 ![badge node version](https://img.shields.io/badge/node-v12.18.3-brightgreen)
 ![badge npm version](https://img.shields.io/badge/npm-6.14.6-brightgreen)
-![badge last commit](https://img.shields.io/github/issueslast-commit/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs)
-![GitHub deployments](https://img.shields.io/github/deployments/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs) 
-![](https://img.shields.io/badge/construction-in%100progress-yellow)
-![badge licence](https://img.shields.io/github/license/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs=MIT)
-
-
+<img alt="github license" src="https://img.shields.io/github/license/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs?logo=MIT">
+ ![GitHub deployments](https://img.shields.io/github/deployments/jambsantos/amiga-help/amigahelp) 
 
 <h1 align="center">
-  <img src="public/images/coloca imagems aqui.png" alt="explicar a imagem aqui" width="500">
+  <img src="public/images/_Ada _Pitch.png" alt="Ilustração da ADA lovelace e lema:criando seu legado na área de TI" width="500">
 <p align="center">#ADA - criando seu legado em TI-<p>
 </h1>
 
