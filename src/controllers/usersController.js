@@ -5,8 +5,8 @@ const SECRET = process.env.SECRET;
 const auth = require('./autenticacao');
 
 const createNewUsers = (request, response) => {
-  const passwordHash = bcrypt.hashSync(req.body.password, 10);
-  req.body.senha = passwordHash;
+  // const passwordHash = bcrypt.hashSync(req.body.password, 10);
+  // req.body.senha = passwordHash;
   const user = new users(request.body);
    user.save(function(err) {
      if (err) {
@@ -16,30 +16,30 @@ const createNewUsers = (request, response) => {
   });
 };
 
-const loginUsers = (request, response) => {
-  users.findOne({ email: request.body.email }, function(error, user) {
-    if (!user) {
-      return response.status(404).send(`No user registered with email ${request.body.email}`);
-    }
-    const validPassword = bcrypt.compareSync(
-      request.body.password, 
-      user.password
-      );
-    if (!validPassword) {
-      return response.status(401).send('Invalid password!!');
-    }
-    const token = jwt.sign({ email: request.body.email }, SECRET);
-    return response.status(200).send(token);
-  });
-};
+// const loginUsers = (request, response) => {
+//   users.findOne({ email: request.body.email }, function(error, user) {
+//     if (!user) {
+//       return response.status(404).send(`No user registered with email ${request.body.email}`);
+//     }
+//     const validPassword = bcrypt.compareSync(
+//       request.body.password, 
+//       user.password
+//       );
+//     if (!validPassword) {
+//       return response.status(401).send('Invalid password!!');
+//     }
+//     const token = jwt.sign({ email: request.body.email }, SECRET);
+//     return response.status(200).send(token);
+//   });
+// };
 
 const getAllUsers = (request, response) => {
-const token = auth(request, response);
+// const token = auth(request, response);
 
-  jwt.verify(token, SECRET, err => {
-    if (err) {
-      return response.status(403).send("Invalid token!")
-    };
+//   jwt.verify(token, SECRET, err => {
+//     if (err) {
+//       return response.status(403).send("Invalid token!")
+//     };
   users.find(function(err, user){
    if(err) {
    response.status(500).send({ message: err.message })
