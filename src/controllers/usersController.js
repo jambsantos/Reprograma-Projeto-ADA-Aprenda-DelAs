@@ -77,6 +77,7 @@ const getByIdUsers = (request, response) => {
       }
       response.status(200).send(user)
   });
+});
 };
 
 const updateUsers = (request, response) => {
