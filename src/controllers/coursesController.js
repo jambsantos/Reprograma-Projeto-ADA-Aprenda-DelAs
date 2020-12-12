@@ -2,23 +2,7 @@ const courses = require("../models/coursesSchema");
 const SECRET = process.env.SECRET;
 const jwt = require("jsonwebtoken");
 
-const getFreeCourses = (req, res) => {
-  const flag = req.query.bananinha
-  courses.find(
-    { free: flag },
-    {  name: 1, type: 1, field: 1, level:1, host: 1, community: 1, link: 1, _id: 0 },
-    (err, course) => {
-      if (err) {
-        return res.status(500).send({ message: err.message });
-      } else if (course) {
-        return res.status(200).send(course);
-      }
-      res.status(404).send("Courses Free not found!");
-    }
-  );
-};
-
-const readAllCourses = (request, response) => {
+const getAllCourses = (request, response) => {
  courses.courses.find((error, course) => {
     if (error) {
       return response.status(500).send({ message: error.message });
@@ -40,11 +24,10 @@ course.save((error) => {
 };
 
 const updateCourses = (request, response) => {
-  const id = request.params.id;
-
-courses.courses.find({ id }, (error, course) => {
+const id = request.params.id;
+courses.find({ id }, (error, course) => {
     if (course.length > 0) {
-      courses.courses.updateMany(
+      courses.updateMany(
         { id },
         { $set: request.body },
         (error) => {
@@ -55,36 +38,112 @@ courses.courses.find({ id }, (error, course) => {
         }
       );
     } else {
-      return response.status(200).send({ message: "Não existe cursos para atualizar" });
+      return response.status(404).send({ message: "Course not found" });
     }
   });
 };
 
 const deleteCourses = (request, response) => {
   const id = request.params.id;
-  courses.courses.find({ id }, (error, course) => {
+  courses.find({ id }, (error, course) => {
     if (course.length > 0) {
-        courses.courses.deleteMany({ id }, (error) => {
+        courses.deleteMany({ id }, (error) => {
         if (error) {
           return response.status(500).send({ message: erro});
         }
         return response.status(200).send({message: "courses successfully deleted",});
       });
     } else {
-      return response.status(200).send({message: "Não existe cursos para deletar" });
+      return response.status(404).send({message: "User not found" });
     }
   });
 };
 
+const getFreeCourses = (request, response) => {
+  const flag = request.query.free
+  courses.find(
+    { free: flag },
+    {  name: 1, type: 1, field: 1, level:1, host: 1, community: 1, link: 1, _id: 0 },
+    (err, course) => {
+      if (err) {
+        return response.status(500).send({ message: err.message });
+      } else if (course) {
+        return response.status(200).send(course);
+      }
+      response.status(404).send("Courses Free not found!");
+    }
+  );
+};
+
+const getCommunityCourses = (request, response) => {
+  const flag = request.query.community
+  courses.find(
+    {community: flag },
+    { name: 1, type: 1, field: 1, level:1, host: 1, free: 1, link: 1, _id: 0 },
+    (err, course) => {
+      if (err) {
+        return response.status(500).send({ message: err.message });
+      } else if (course) {
+        return response.status(200).send(course);
+      }
+      response.status(404).send("Community not found!");
+    }
+  );
+};
+
+const getTipyCourses = (request, response) => {
+  const flag = request.query.tipy
+  courses.find(
+    { tipy: flag },
+    { name: 1, field: 1, level:1, host: 1, free:1, community: 1, link: 1, _id: 0 },
+    (err, course) => {
+      if (err) {
+        return response.status(500).send({ message: err.message });
+      } else if (course) {
+        return response.status(200).send(course);
+      }
+      response.status(404).send("Courses type not found!");
+    }
+  );
+};
+
+const  getLevelFreeCourses= (request, response) => {
+  const level = request.query.level;
+  const free = request.query.free;
+
+ users.find({level:level, free:free}, function (err, user) {
+      if (err) {
+          response.status(500).send({ message: err.message })
+      } else {
+          response.status(200).send(user)
+      }
+  });
+};
+
+const getFieldCourses = (request, response) => {
+  const flag = request.query.field
+  courses.find(
+    { field: flag },
+    { name: 1, type: 1, level:1, host: 1, free:1, community: 1, link: 1, _id: 0 },
+    (err, course) => {
+      if (err) {
+        return response.status(500).send({ message: err.message });
+      } else if (course) {
+        return response.status(200).send(course);
+      }
+      response.status(404).send("Courses field not found!");
+    }
+  );
+};
+
 module.exports = {
-  readAllCourses,
+  getAllCourses,
   createNewCourses,
-  readByIDCourses,
   updateCourses,
   deleteCourses,
   getTipyCourses,
   getFieldCourses,
-  getLevelCourses,
+  getLevelFreeCourses,
   getFreeCourses,
   getCommunityCourses
 };
