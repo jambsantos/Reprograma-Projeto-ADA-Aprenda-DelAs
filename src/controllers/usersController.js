@@ -49,8 +49,6 @@ const token = auth(request, response);
 });
 };
 
-
-
 const getByIdUsers = (request, response) => {
   const id = request.params.id;
  users.find({ id }, function(err, user){

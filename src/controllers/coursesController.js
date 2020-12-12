@@ -3,7 +3,7 @@ const SECRET = process.env.SECRET;
 const jwt = require("jsonwebtoken");
 
 const getAllCourses = (request, response) => {
- courses.courses.find((error, course) => {
+ courses.find((error, course) => {
     if (error) {
       return response.status(500).send({ message: error.message });
     } else {
@@ -25,9 +25,9 @@ course.save((error) => {
 
 const updateCourses = (request, response) => {
 const id = request.params.id;
-courses.find({ id }, (error, course) => {
+courses.findById({ id }, (error, course) => {
     if (course.length > 0) {
-      courses.updateMany(
+      courses.findByIdAndUpdate(
         { id },
         { $set: request.body },
         (error) => {
@@ -45,9 +45,9 @@ courses.find({ id }, (error, course) => {
 
 const deleteCourses = (request, response) => {
   const id = request.params.id;
-  courses.find({ id }, (error, course) => {
+  courses.findById({ id }, (error, course) => {
     if (course.length > 0) {
-        courses.deleteMany({ id }, (error) => {
+        courses.findByIdAndDelete({ id }, (error) => {
         if (error) {
           return response.status(500).send({ message: erro});
         }
@@ -111,11 +111,11 @@ const  getLevelFreeCourses= (request, response) => {
   const level = request.query.level;
   const free = request.query.free;
 
- users.find({level:level, free:free}, function (err, user) {
+ courses.find({level:level, free:free}, function (err, course) {
       if (err) {
           response.status(500).send({ message: err.message })
       } else {
-          response.status(200).send(user)
+          response.status(200).send(course)
       }
   });
 };
