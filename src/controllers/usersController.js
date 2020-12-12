@@ -155,9 +155,6 @@ const updateLevel = (request, response) => {
     return response.status(401).send('Header null');
   }
  const token = authHeader.split(' ')[1]
- 
- //const token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF6dWwxMkBnbWFpbC5jb20iLCJpYXQiOjE2MDc3ODU0MTJ9.kZ78PltBxMLI_Fv2el89Hb-mbHAGo9g9CZlQv7nmVU4
- console.log(token)
   jwt.verify(token,SECRET, err =>{
     if (err){
      return response.status(424).send({ message: err.message });
@@ -166,11 +163,14 @@ const updateLevel = (request, response) => {
 const id = request.params.id;
 users.find({ id }, (err, user) => {
 if (user.length > 0) {
-users.updateOne({ id },{ $set: request.body }, function (err) {
+users.updateOne({ id },{$set: { "user.tagLevel": request.body.tagLevel }}
+  , function (err) {
     if (err) {
       response.status(500).send({ message: err.message })
-    } else {
-      response.status(200).send({ message: "Level updated succesfuly!"})
+    } else if (!request.body.tagLevel){
+      response.status(424).send({ message: "só atualiza tagLevel - corrija"})
+    } else{
+    response.status(200).send({ message: "Level updated succesfuly!"})
     }
   });  
 }});
