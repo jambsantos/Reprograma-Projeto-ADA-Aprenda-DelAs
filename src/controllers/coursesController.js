@@ -13,6 +13,11 @@ const getAllCourses = (request, response) => {
 };
 
 const createNewCourses = (request, response) => {
+  const token = auth(request, response);
+  jwt.verify(token, SECRET, err => {
+    if (err) {
+      return response.status(403).send("Invalid token!")
+    };
 const course = new courses(request.body);
 course.save((error) => {
     if (error) {
@@ -21,9 +26,15 @@ course.save((error) => {
       return response.status(201).send(course);
     }
   });
+});
 };
 
 const updateCourses = (request, response) => {
+  const token = auth(request, response);
+  jwt.verify(token, SECRET, err => {
+    if (err) {
+      return response.status(403).send("Invalid token!")
+    };
 const id = request.params.id;
 courses.find({ id }, (error, course) => {
     if (course.length > 0) {
@@ -41,9 +52,15 @@ courses.find({ id }, (error, course) => {
       return response.status(404).send({ message: "Course not found" });
     }
   });
+});
 };
 
 const deleteCourses = (request, response) => {
+  const token = auth(request, response);
+  jwt.verify(token, SECRET, err => {
+    if (err) {
+      return response.status(403).send("Invalid token!")
+    };
   const id = request.params.id;
   courses.find({ id }, (error, course) => {
     if (course.length > 0) {
@@ -57,6 +74,7 @@ const deleteCourses = (request, response) => {
       return response.status(404).send({message: "User not found" });
     }
   });
+});
 };
 
 const getFreeCourses = (request, response) => {
