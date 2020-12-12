@@ -60,6 +60,16 @@ const getAllUsers = (request, response) => {
 };
 
 const getByIdUsers = (request, response) => {
+  const authHeader = request.get('authorization')
+  if (!authHeader){
+    return response.status(401).send('Header null');
+  }
+  const token = authHeader.split(' ')[1]
+ 
+  jwt.verify(token,SECRET, err =>{
+    if (err){
+     return response.status(424).send({ message: err.message });
+    }
   const id = request.params.id;
  users.find({ id }, function(err, user){
       if(err) {

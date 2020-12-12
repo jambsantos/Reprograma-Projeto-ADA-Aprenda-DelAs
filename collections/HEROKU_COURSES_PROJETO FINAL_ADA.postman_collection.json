@@ -1,0 +1,266 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HEROKU_COURSES_PROJETO FINAL_ADA",
+		"_postman_id": "2d8875a1-594d-7218-5f43-da0b656ffe10",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HEROKU GET COURSES",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/courses/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU CREATE NEW COURSES",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/courses/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"id\":1,\r\n  \"name\":\"frontend primeiros passos\",\r\n  \"type\":\"bootcamp\",\r\n  \"field\": \"frontend\",\r\n  \"level\":\"mochileira\",\r\n  \"host\": \"reprograma\",\r\n  \"free\": \"true\",\r\n  \"community\": true,\r\n  \"link\": \"www.reprograma.com/frontend&&primeirospassos\"\r\n }\r\n  \r\n  "
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU PUT COURSES",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/courses/4",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"id\":1,\r\n  \"name\":\"frontend primeiros passos\",\r\n  \"type\":\"bootcamp\",\r\n  \"field\": \"frontend\",\r\n  \"level\":\"mergulhadora\",\r\n  \"host\": \"reprograma\",\r\n  \"free\": \"true\",\r\n  \"community\": true,\r\n  \"link\": \"www.reprograma.com/frontend&&primeirospassos\"\r\n }\r\n  "
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU DELETE COURSES",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/courses/3",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU GET FREE COURSES",
+			"request": {
+				"url": {
+					"raw": "https://app-aprendadelas.herokuapp.com/courses/free?free=true",
+					"protocol": "https",
+					"host": [
+						"app-aprendadelas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"courses",
+						"free"
+					],
+					"query": [
+						{
+							"key": "free",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU GET TIPY COURSES ",
+			"request": {
+				"url": {
+					"raw": "https://app-aprendadelas.herokuapp.com/courses/type?type=bootcamp",
+					"protocol": "https",
+					"host": [
+						"app-aprendadelas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"courses",
+						"type"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "bootcamp",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU GET FIELD COURSES",
+			"request": {
+				"url": {
+					"raw": "https://app-aprendadelas.herokuapp.com/courses/field?field=backend",
+					"protocol": "https",
+					"host": [
+						"app-aprendadelas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"courses",
+						"field"
+					],
+					"query": [
+						{
+							"key": "field",
+							"value": "backend",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU GET COMMUNITY COURSES",
+			"request": {
+				"url": {
+					"raw": "https://app-aprendadelas.herokuapp.com/courses/community?community=true",
+					"protocol": "https",
+					"host": [
+						"app-aprendadelas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"courses",
+						"community"
+					],
+					"query": [
+						{
+							"key": "community",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU GET LEVELFREE COURSES",
+			"request": {
+				"url": {
+					"raw": "https://app-aprendadelas.herokuapp.com/courses/levelfree?level=mochileira&&free=true",
+					"protocol": "https",
+					"host": [
+						"app-aprendadelas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"courses",
+						"levelfree"
+					],
+					"query": [
+						{
+							"key": "level",
+							"value": "mochileira",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "free",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

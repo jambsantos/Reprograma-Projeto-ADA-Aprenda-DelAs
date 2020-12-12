@@ -1,0 +1,227 @@
+{
+	"variables": [],
+	"info": {
+		"name": "USERS_PROJETO FINAL_ADA",
+		"_postman_id": "10a56dce-61e6-f848-a62b-02dd954ee1bb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL USERS",
+			"request": {
+				"url": "http://localhost:8080/users/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY ID USERS",
+			"request": {
+				"url": "http://localhost:8080/users/16",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW USERS",
+			"request": {
+				"url": "http://localhost:8080/users/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n  \"id\":13,\r\n  \"name\":\"raissa santos\",\r\n  \"tagField\":\"frontend\",\r\n  \"tagLevel\":\"astronauta\",\r\n  \"email\": \"lilas123@gmail.com\",\r\n  \"password\": \"lilas123\"\r\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST LOGIN USERS",
+			"request": {
+				"url": "http://localhost:8080/users/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"email\": \"preto123@gmail.com\",\n \"password\": \"preto123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USERS",
+			"request": {
+				"url": "http://localhost:8080/users/6",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"tagField\":\"mobile\",\n  \"tagLevel\":\"mergulhadora\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USERS ",
+			"request": {
+				"url": "http://localhost:8080/users/7",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET TAG FIELD USERS",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/users/field?tagField=Dados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"field"
+					],
+					"query": [
+						{
+							"key": "tagField",
+							"value": "Dados",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET TAG LEVEL USERS",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/users/level?tagLevel=astronauta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"level"
+					],
+					"query": [
+						{
+							"key": "tagLevel",
+							"value": "astronauta",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE LEVEL USER",
+			"request": {
+				"url": "http://localhost:8080/users/13",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"tagLevel\":\"iniciante\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

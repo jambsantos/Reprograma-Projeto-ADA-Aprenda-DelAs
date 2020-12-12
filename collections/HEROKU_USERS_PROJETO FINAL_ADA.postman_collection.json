@@ -1,0 +1,231 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HEROKU_USERS_PROJETO FINAL_ADA",
+		"_postman_id": "64ae7f34-30f4-ac19-5cda-3256f27cc253",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HEROKU GET ALL USERS",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU GET BY ID USERS",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/users/3",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU CREATE NEW USERS",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/users/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\":13,\r\n  \"name\":\"raissa santos\",\r\n  \"tagField\":\"frontend e mobile\",\r\n  \"tagLevel\":\"astronauta\",\r\n  \"email\": \"lilas123@gmail.com\",\r\n  \"password\": \"lilas123\"\r\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU POST LOGIN USERS",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/users/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"email\": \"preto123@gmail.com\",\n \"password\": \"preto123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU UPDATE USERS",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/users/13",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"tagField\":\"mobile\",\n  \"tagLevel\":\"mergulhadora\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU DELETE USERS ",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/users/8",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU GET TAG FIELD USERS",
+			"request": {
+				"url": {
+					"raw": "https://app-aprendadelas.herokuapp.com/users/field?tagField=backend",
+					"protocol": "https",
+					"host": [
+						"app-aprendadelas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"field"
+					],
+					"query": [
+						{
+							"key": "tagField",
+							"value": "backend",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU GET TAG LEVEL USERS",
+			"request": {
+				"url": {
+					"raw": "https://app-aprendadelas.herokuapp.com/users/level?tagLevel=astronauta",
+					"protocol": "https",
+					"host": [
+						"app-aprendadelas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"level"
+					],
+					"query": [
+						{
+							"key": "tagLevel",
+							"value": "astronauta",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HEROKU UPDATE LEVEL USER",
+			"request": {
+				"url": "https://app-aprendadelas.herokuapp.com/users/2",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"tagLevel\":\"mergulhadora\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,261 @@
+{
+	"variables": [],
+	"info": {
+		"name": "COURSES_PROJETO FINAL_ADA",
+		"_postman_id": "cffd3e26-4b8d-aa0a-f894-5130e71c7ead",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET COURSES",
+			"request": {
+				"url": "http://localhost:8080/courses/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW COURSES",
+			"request": {
+				"url": "http://localhost:8080/courses/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"id\":1,\r\n  \"name\":\"frontend primeiros passos\",\r\n  \"type\":\"bootcamp\",\r\n  \"field\": \"frontend\",\r\n  \"level\":\"mochileira\",\r\n  \"host\": \"reprograma\",\r\n  \"free\": \"true\",\r\n  \"community\": true,\r\n  \"link\": \"www.reprograma.com/frontend&&primeirospassos\"\r\n }\r\n  \r\n  "
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT COURSES",
+			"request": {
+				"url": "http://localhost:8080/courses/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"id\":1,\r\n  \"name\":\"backend primeiros passos\",\r\n  \"type\":\"bootcamp\",\r\n  \"field\": \"backend\",\r\n  \"level\":\"mochileira\",\r\n  \"host\": \"reprograma\",\r\n  \"free\": \"true\",\r\n  \"community\": true,\r\n  \"link\": \"www.reprograma.com/backend&&primeirospassos\"\r\n }\r\n  \r\n  "
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE COURSES",
+			"request": {
+				"url": "http://localhost:8080/courses/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET FREE COURSES",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/courses/free?free=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses",
+						"free"
+					],
+					"query": [
+						{
+							"key": "free",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET TIPY COURSES ",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/courses/type?type=bootcamp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses",
+						"type"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "bootcamp",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET FIELD COURSES",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/courses/field?field=backend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses",
+						"field"
+					],
+					"query": [
+						{
+							"key": "field",
+							"value": "backend",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET COMMUNITY COURSES",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/courses/community?community=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses",
+						"community"
+					],
+					"query": [
+						{
+							"key": "community",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET LEVELFREE COURSES",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/courses/levelfree?level=mochileira&&free=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses",
+						"levelfree"
+					],
+					"query": [
+						{
+							"key": "level",
+							"value": "mochileira",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "free",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
