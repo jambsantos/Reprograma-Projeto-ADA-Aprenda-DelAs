@@ -26,9 +26,8 @@ course.save((error) => {
 const updateCourses = (request, response) => {
 const id = request.params.id;
 courses.find({ id }, (error, course) => {
-  let course = [];
     if (course.length > 0) {
-      courses.findByIdAndUpdate(
+      courses.updateOne(
         { id },
         { $set: request.body },
         (error) => {
@@ -48,7 +47,7 @@ const deleteCourses = (request, response) => {
   const id = request.params.id;
   courses.find({ id }, (error, course) => {
     if (course.length > 0) {
-        courses.findByIdAndDelete({ id }, (error) => {
+        courses.deleteOne({ id }, (error) => {
         if (error) {
           return response.status(500).send({ message: erro});
         }
