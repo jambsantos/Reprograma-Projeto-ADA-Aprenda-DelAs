@@ -1,15 +1,15 @@
 [![Deploy on heroku](https://img.shields.io/badge/deploy-heroku.com-blueviolet)](https://app-aprendadelas.herokuapp.com/)
 ![badge node version](https://img.shields.io/badge/node-v12.18.3-brightgreen)
 ![badge npm version](https://img.shields.io/badge/npm-6.14.6-brightgreen)
-<img alt="github license" src="https://img.shields.io/github/license/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs?logo=MIT">
- ![GitHub deployments](https://img.shields.io/github/deployments/jambsantos/amiga-help/amigahelp) 
+<img alt="github license" src="https://img.shields.io/github/license/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs?logo=mit">
+
 
 <h1 align="center">
-  <img src="public/images/_Ada _Pitch.png" alt="Ilustração da ADA lovelace e lema:criando seu legado na área de TI" width="500">
-<p align="center">#ADA - criando seu legado em TI-<p>
+  <img src="./images/ADAcapa.png" alt="Ilustração da ADA lovelace e lema:criando seu legado na área de TI" width="500">
+<p align="center"> <p>
 </h1>
 
-> Banco de dados de candidaturas negras que concorreram a eleição municipal 2020 na Região Metropolitana do Recife (PE).
+> Banco de dados de cursos de tecnologia para mulheres feito por mulheres. 
 
 > Status: **Concluído** :heavy_check_mark:
 
