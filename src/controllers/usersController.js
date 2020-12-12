@@ -178,7 +178,7 @@ users.updateOne({ id },{$set: { "user.tagLevel": request.body.tagLevel }}
     if (err) {
       response.status(500).send({ message: err.message })
     } else if (!request.body.tagLevel){
-      response.status(424).send({ message: "só atualiza tagLevel - corrija"})
+      response.status(424).send({ message: "ERROR - option valid only tagLevel ;)"})
     } else{
     response.status(200).send({ message: "Level updated succesfuly!"})
     }
