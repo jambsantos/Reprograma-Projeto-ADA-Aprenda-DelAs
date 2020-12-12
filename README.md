@@ -5,7 +5,7 @@
 
 
 <h1 align="center">
-  <img src="./images/ADAcapa.png" alt="Ilustração da ADA lovelace e lema:criando seu legado na área de TI" width="500">
+  <img src="./images/ADAcapa.png" alt="Ilustração da ADA lovelace e lema:criando seu legado na área de TI" width="800">
 <p align="center"> <p>
 </h1>
 
