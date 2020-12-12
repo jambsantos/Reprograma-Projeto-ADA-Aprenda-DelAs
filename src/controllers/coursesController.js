@@ -25,7 +25,8 @@ course.save((error) => {
 
 const updateCourses = (request, response) => {
 const id = request.params.id;
-courses.findById({ id }, (error, course) => {
+courses.find({ id }, (error, course) => {
+  let course = [];
     if (course.length > 0) {
       courses.findByIdAndUpdate(
         { id },
@@ -37,7 +38,7 @@ courses.findById({ id }, (error, course) => {
           return response.status(200).send({message: "Course changed successfully" });
         }
       );
-    } else {
+    }  else {
       return response.status(404).send({ message: "Course not found" });
     }
   });
@@ -45,7 +46,7 @@ courses.findById({ id }, (error, course) => {
 
 const deleteCourses = (request, response) => {
   const id = request.params.id;
-  courses.findById({ id }, (error, course) => {
+  courses.find({ id }, (error, course) => {
     if (course.length > 0) {
         courses.findByIdAndDelete({ id }, (error) => {
         if (error) {
