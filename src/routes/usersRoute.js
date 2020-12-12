@@ -10,7 +10,7 @@ router.patch("/level", controller.updateLevel);
 router.get("/:id", controller.getByIdUsers);
 router.put('/:id', controller.updateUsers);
 router.delete('/:id', controller.deleteUsers);
-router.post('/login', controller.loginUsers);
+//router.post('/login', controller.loginUsers);
 
 
 module.exports = router;

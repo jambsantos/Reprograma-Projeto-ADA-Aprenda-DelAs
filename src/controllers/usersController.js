@@ -2,7 +2,7 @@ const users = require('../models/usersSchema');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
-const auth = require('./autenticacao');
+//const auth = require('./autenticacao');
 
 const createNewUsers = (request, response) => {
   // const passwordHash = bcrypt.hashSync(req.body.password, 10);
@@ -46,8 +46,7 @@ const getAllUsers = (request, response) => {
    }
    response.status(200).send(user)
  });
-});
-};
+}
 
 const getByIdUsers = (request, response) => {
   const id = request.params.id;
@@ -137,5 +136,5 @@ module.exports = {
     getTagFieldUser,
     getTagLevelUser,
     updateLevel,
-    loginUsers
+    //loginUsers
 }
