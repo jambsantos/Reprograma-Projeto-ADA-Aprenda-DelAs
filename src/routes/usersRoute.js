@@ -6,11 +6,12 @@ router.get('/', controller.getAllUsers);
 router.post('/', controller.createNewUsers);
 router.get("/field", controller.getTagFieldUser);
 router.get("/level", controller.getTagLevelUser);
-router.patch("/level", controller.updateLevel);
+router.post('/login', controller.loginUsers);
 router.get("/:id", controller.getByIdUsers);
 router.put('/:id', controller.updateUsers);
 router.delete('/:id', controller.deleteUsers);
-router.post('/login', controller.loginUsers);
+router.patch("/:id", controller.updateLevel);
+
 
 
 module.exports = router;

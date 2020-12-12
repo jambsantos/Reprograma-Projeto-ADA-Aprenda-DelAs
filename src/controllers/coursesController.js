@@ -18,13 +18,17 @@ const createNewCourses = (request, response) => {
   if (!authHeader){
     return response.status(401).send('Header null');
   }
+  console.log("entrei aqui ")
   const token = authHeader.split(' ')[1]
- 
+ console.log(token)
   jwt.verify(token,SECRET, err =>{
     if (err){
+    console.log("erro aqui ")
      return response.status(424).send({ message: err.message });
     }
+  
 const course = new courses(request.body);
+console.log (course)
 course.save((error) => {
     if (error) {
       return response.status(500).send({message: error.message,});

@@ -40,23 +40,24 @@ const loginUsers = (request, response) => {
 };
 
 const getAllUsers = (request, response) => {
-  // const authHeader = request.get('authorization')
-  // if (!authHeader){
-  //   return response.status(401).send('Header null');
-  // }
-  // const token = authHeader.split(' ')[1]
+  const authHeader = request.get('authorization')
+  if (!authHeader){
+    return response.status(401).send('Header null');
+  }
+  const token = authHeader.split(' ')[1]
  
-  // jwt.verify(token,SECRET, err =>{
-  //   if (err){
-  //    return response.status(424).send({ message: err.message });
-  //   }
+  jwt.verify(token,SECRET, err =>{
+    if (err){
+     return response.status(424).send({ message: err.message });
+    }
   users.find(function(err, user){
    if(err) {
    response.status(500).send({ message: err.message })
    }
    response.status(200).send(user)
  });
-}//);};
+});
+};
 
 const getByIdUsers = (request, response) => {
   const id = request.params.id;
@@ -82,7 +83,7 @@ const updateUsers = (request, response) => {
   const id = request.params.id;
 users.find({ id }, (err, user) => {
     if (user.length > 0) {
-      users.updateOne(
+      users.updateMany(
         { id },
         { $set: request.body },
         (err) => {
@@ -159,14 +160,17 @@ const updateLevel = (request, response) => {
     if (err){
      return response.status(424).send({ message: err.message });
     }
-  const level = request.query.tagLevel
- users.updateMany({tagLevel:level }, { $set : request.body}, function (err) {
+const id = request.params.id;
+users.find({ id }, (err, user) => {
+if (user.length > 0) {
+users.updateOne({ id },{ $set: request.body }, function (err) {
     if (err) {
       response.status(500).send({ message: err.message })
     } else {
       response.status(200).send({ message: "Level updated succesfuly!"})
     }
   });  
+}});
 });
 };
 
