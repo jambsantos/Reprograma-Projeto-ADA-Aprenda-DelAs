@@ -2,29 +2,35 @@ const users = require('../models/usersSchema');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
-const auth = require('./autenticacao');
+
 
 const createNewUsers = (request, response) => {
-  const passwordHash = bcrypt.hashSync(req.body.password, 10);
-  req.body.senha = passwordHash;
+  const passwordHash = bcrypt.hashSync(request.body.password, 10);
+  request.body.password = passwordHash;
   const user = new users(request.body);
    user.save(function(err) {
      if (err) {
-        response.status(500).send({ message: err.message })
+      response.status(500).send({ message: err.message })
      }
      response.status(201).send(user)
   });
 };
 
 const loginUsers = (request, response) => {
-  users.findOne({ email: request.body.email }, function(error, user) {
+ 
+  users.findOne({ email: request.body.email }, (err, user)=> {
+    if (err){
+      response.status(500).send({ message: err.message })
+    }
     if (!user) {
       return response.status(404).send(`No user registered with email ${request.body.email}`);
     }
-    const validPassword = bcrypt.compareSync(
-      request.body.password, 
-      user.password
-      );
+    
+    const validPassword = bcrypt.compareSync(request.body.password, user.password);
+    console.log(validPassword)
+    console.log (request.body.password)
+    console.log (user.password)
+
     if (!validPassword) {
       return response.status(401).send('Invalid password!!');
     }
@@ -34,19 +40,23 @@ const loginUsers = (request, response) => {
 };
 
 const getAllUsers = (request, response) => {
-const token = auth(request, response);
-  jwt.verify(token, SECRET, err => {
-    if (err) {
-      return response.status(403).send("Invalid token!")
-    };
+  // const authHeader = request.get('authorization')
+  // if (!authHeader){
+  //   return response.status(401).send('Header null');
+  // }
+  // const token = authHeader.split(' ')[1]
+ 
+  // jwt.verify(token,SECRET, err =>{
+  //   if (err){
+  //    return response.status(424).send({ message: err.message });
+  //   }
   users.find(function(err, user){
    if(err) {
    response.status(500).send({ message: err.message })
    }
    response.status(200).send(user)
  });
-});
-};
+}//);};
 
 const getByIdUsers = (request, response) => {
   const id = request.params.id;
@@ -59,11 +69,16 @@ const getByIdUsers = (request, response) => {
 };
 
 const updateUsers = (request, response) => {
-  const token = auth(request, response);
-  jwt.verify(token, SECRET, err => {
-    if (err) {
-      return response.status(403).send("Invalid token!")
-    };
+  const authHeader = request.get('authorization')
+  if (!authHeader){
+    return response.status(401).send('Header null');
+  }
+  const token = authHeader.split(' ')[1]
+ 
+  jwt.verify(token,SECRET, err =>{
+    if (err){
+     return response.status(424).send({ message: err.message });
+    }
   const id = request.params.id;
 users.find({ id }, (err, user) => {
     if (user.length > 0) {
@@ -85,11 +100,16 @@ users.find({ id }, (err, user) => {
 };
 
 const deleteUsers = (request, response) => {
-  const token = auth(request, response);
-  jwt.verify(token, SECRET, err => {
-    if (err) {
-      return response.status(403).send("Invalid token!")
-    };
+  const authHeader = request.get('authorization')
+  if (!authHeader){
+    return response.status(401).send('Header null');
+  }
+  const token = authHeader.split(' ')[1]
+ 
+  jwt.verify(token,SECRET, err =>{
+    if (err){
+     return response.status(424).send({ message: err.message });
+    }
   const id = request.params.id;
  users.find({ id }, (err, user) => {
     if (user.length > 0) {
@@ -129,11 +149,16 @@ const getTagLevelUser= (request, response) => {
 };
 
 const updateLevel = (request, response) => {
-  const token = auth(request, response);
-  jwt.verify(token, SECRET, err => {
-    if (err) {
-      return response.status(403).send("Invalid token!")
-    };
+  const authHeader = request.get('authorization')
+  if (!authHeader){
+    return response.status(401).send('Header null');
+  }
+  const token = authHeader.split(' ')[1]
+ 
+  jwt.verify(token,SECRET, err =>{
+    if (err){
+     return response.status(424).send({ message: err.message });
+    }
   const level = request.query.tagLevel
  users.updateMany({tagLevel:level }, { $set : request.body}, function (err) {
     if (err) {

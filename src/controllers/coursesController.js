@@ -2,6 +2,7 @@ const courses = require("../models/coursesSchema");
 const SECRET = process.env.SECRET;
 const jwt = require("jsonwebtoken");
 
+
 const getAllCourses = (request, response) => {
  courses.find((error, course) => {
     if (error) {
@@ -13,11 +14,16 @@ const getAllCourses = (request, response) => {
 };
 
 const createNewCourses = (request, response) => {
-  const token = auth(request, response);
-  jwt.verify(token, SECRET, err => {
-    if (err) {
-      return response.status(403).send("Invalid token!")
-    };
+  const authHeader = request.get('authorization')
+  if (!authHeader){
+    return response.status(401).send('Header null');
+  }
+  const token = authHeader.split(' ')[1]
+ 
+  jwt.verify(token,SECRET, err =>{
+    if (err){
+     return response.status(424).send({ message: err.message });
+    }
 const course = new courses(request.body);
 course.save((error) => {
     if (error) {
@@ -30,11 +36,16 @@ course.save((error) => {
 };
 
 const updateCourses = (request, response) => {
-  const token = auth(request, response);
-  jwt.verify(token, SECRET, err => {
-    if (err) {
-      return response.status(403).send("Invalid token!")
-    };
+  const authHeader = request.get('authorization')
+  if (!authHeader){
+    return response.status(401).send('Header null');
+  }
+  const token = authHeader.split(' ')[1]
+ 
+  jwt.verify(token,SECRET, err =>{
+    if (err){
+     return response.status(424).send({ message: err.message });
+    }
 const id = request.params.id;
 courses.find({ id }, (error, course) => {
     if (course.length > 0) {
@@ -56,11 +67,16 @@ courses.find({ id }, (error, course) => {
 };
 
 const deleteCourses = (request, response) => {
-  const token = auth(request, response);
-  jwt.verify(token, SECRET, err => {
-    if (err) {
-      return response.status(403).send("Invalid token!")
-    };
+  const authHeader = request.get('authorization')
+  if (!authHeader){
+    return response.status(401).send('Header null');
+  }
+  const token = authHeader.split(' ')[1]
+ 
+  jwt.verify(token,SECRET, err =>{
+    if (err){
+     return response.status(424).send({ message: err.message });
+    }
   const id = request.params.id;
   courses.find({ id }, (error, course) => {
     if (course.length > 0) {
