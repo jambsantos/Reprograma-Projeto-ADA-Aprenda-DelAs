@@ -37,17 +37,26 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
 
 #### **Para os cursos**
 [x] Cadastro de novos cursos
+
 [x] Listar todos os cursos
+
 [x] Atualizar um curso específico
+
 [x] Remover um curso específico do banco de dados
+
 [x] Visualizar cursos por categoria (Ex:Bootcamp, Workshop, Graduação)
+
 [x] Visualizar cursos por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
+
 [x] Visualizar cursos por comunidade
+
 [x] Visualizar cursos por nível 
   - Exploradora: primeiros passos em tecnologia
   - Mergulhadora: mergulha em área de interesse
   - Astronauta: voando para o mercado
+  
 [x] Visualizar cursos por forma de pagamento
+
 [x] Visualizar curso por nível e forma de pagamento
 
 #### **Para as usuárias**
@@ -64,7 +73,7 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
   - Astronauta: voando para o mercado
 [x] Editar nível de uma usuária específica
 
-## **Tecnologias
+## **Tecnologias**
 
 - Controle de versões <img alt="Git version" src="https://img.shields.io/badge/Git/GitHub-brightgreen">
 - Editor de código - IDE <img alt="VSCode version" src="https://img.shields.io/badge/-VSCode-blue">
