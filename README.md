@@ -36,35 +36,35 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
 ## **Funcionalidades**
 
 #### **Para os cursos**
-[x] Cadastro de novos cursos
-[x] Listar todos os cursos
-[x] Atualizar um curso específico
-[x] Remover um curso específico do banco de dados
-[x] Visualizar cursos por categoria (Ex:Bootcamp, Workshop, Graduação)
-[x] Visualizar cursos por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
-[x] Visualizar cursos por comunidade
-[x] Visualizar cursos por nível 
+✔️ Cadastro de novos cursos
+✔️ Listar todos os cursos
+✔️ Atualizar um curso específico
+✔️ Remover um curso específico do banco de dados
+✔️ Pesquisar cursos por categoria (Ex:Bootcamp, Workshop, Graduação)
+✔️ Pesquisar cursos por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
+✔️ Pesquisar cursos por comunidade
+✔️ Pesquisar cursos por nível 
   - Exploradora: primeiros passos em tecnologia
   - Mergulhadora: mergulha em área de interesse
   - Astronauta: voando para o mercado
-[x] Visualizar cursos por forma de pagamento
-[x] Visualizar curso por nível e forma de pagamento
+✔️ Pesquisar cursos por forma de pagamento
+✔️ Pesquisar curso por nível e forma de pagamento
 
 #### **Para as usuárias**
-[x] Login como usuária
-[x] Cadastrar nova usuária
-[x] Listar todas as usuárias
-[x] Atualizar dados de uma usuária específica
-[x] Remover cadastro de uma usuária específica
-[x] Filtrar cadastro de uma usuária específica
-[x] Filtrar usuárias por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
-[x] Filtrar usuárias por nível 
+ Login como usuária
+✔️ Cadastrar nova usuária
+✔️ Listar todas as usuárias
+✔️ Atualizar dados de uma usuária específica
+✔️ Remover cadastro de uma usuária específica
+✔️ Filtrar cadastro de uma usuária específica
+✔️ Filtrar usuárias por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
+✔️ Filtrar usuárias por nível 
   - Exploradora: primeiros passos em tecnologia
   - Mergulhadora: mergulha em área de interesse
   - Astronauta: voando para o mercado
-[x] Editar nível de uma usuária específica
+✔️ Editar nível de uma usuária específica
 
-## **Tecnologias
+## **Tecnologias**
 
 - Controle de versões <img alt="Git version" src="https://img.shields.io/badge/Git/GitHub-brightgreen">
 - Editor de código - IDE <img alt="VSCode version" src="https://img.shields.io/badge/-VSCode-blue">
@@ -72,10 +72,76 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
 - Framework JavaScript <img alt="Express version" src="https://img.shields.io/badge/express-4.17.1-green">
 - Gerenciador de pacotes <img alt="npm version" src="https://img.shields.io/badge/npm-6.14.6-green">
 -   Running tests local <img alt="postman version" src="https://img.shields.io/badge/-Postman-orange">
-- Visualizar banco de dados localmente <img alt="Robo 3T" src="https://img.shields.io/badge/-Robo3T-brightgreen">
+- Pesquisar banco de dados localmente <img alt="Robo 3T" src="https://img.shields.io/badge/-Robo3T-brightgreen">
 - Hospedagem do banco de dados na nuvem ![MongoDB](https://img.shields.io/badge/MongoDB-444444.svg?style=flat-square&logo=mongoDB&logoColor=green)
 - Deploy da aplicação na web![Heroku](https://img.shields.io/badge/Heroku-430098?align=style=flat-square&logo=heroku&logoColor=white)
 - Dependências para autenticação <img alt="Bcrypt version" src="https://img.shields.io/badge/bcrypt-5.0.0-green"> <img alt="Jsonwebtoken version" src="https://img.shields.io/badge/jsonwebtoken-8.5.1-green">
 - Outras dependências e bibliotecas <img alt="Mongoose version" src="https://img.shields.io/badge/mongoose-5.10.17-green"> <img alt="Nodemon version" src="https://img.shields.io/badge/nodemon-2.0.6-green">
 
+## **Features e rotas**
 
+Esta API está sendo escutada na `porta 8080` e para que todas as rotas possam ser acessadas localmente é necessário usar `http://localhost:8080/` antes dos endpoints de requisição.
+
+### **Manipulando os registros de cursos**
+| Feature                                                      | Método | Rota                        |
+| ------------------------------------------------------------ | ------ | --------------------------- |
+| Cadastrar um curso                                          | POST   | /courses                      |
+| Listar todos os cursos cadastrados                    | GET    | /courses                     |
+| Pesquisar cursos por categoria (Bootcamp, Workshop, Graduação)  | GET    | /courses/type                     |
+| Pesquisar cursos por área (FrontEnd, BackEnd, Dados, Mobile, Infra)          | GET    | /courses/field   |
+| Pesquisar cursos por comunidade | GET    | /courses/community                 |
+| Pesquisar cursos por forma de pagamento | GET    | /courses/free                 |
+| Pesquisar cursos por  nível(exploradora,mergulhadora,astronauta)  | GET    | /courses/level                |
+| Pesquisar cursos por  nível  e forma de pagamento| GET    | /courses/levelfree                |
+| Editar o registro completo de um curso, buscando pelo Id     | PUT    | /courses/:id                  |
+| Excluir registro de um curso pelo Id  | DELETE | /courses/:id                  |
+
+### **Manipulando os registros de usuárias**
+
+| Feature                                                 | Método | Rota                                     |
+| ------------------------------------------------------- | ------ | ---------------------------------------- |
+| Cadastrar nova usuária | POST   | /users                         |
+| Login como usuária                | POST    | /users/login                         |
+| Listar todas as usuárias              | GET    | /users |
+| Filtrar cadastro de uma usuária específica pelo Id | GET    | /users/:id          |
+| Filtrar usuárias por área (FrontEnd, BackEnd, Dados, Mobile, Infra)                              | GET    | users/field                   |
+| Filtrar usuárias por nível(exploradora,mergulhadora,astronauta)                     | GET   | /users/level                     |
+| Editar nível de uma usuária, buscando pelo id       | PATCH  | /users/:id                         |
+| Atualizar dados de uma usuária específica                         | PUT | /users/:id                      |
+| Remover cadastro de uma usuária específica                      | DELETE | /users/:id               |
+
+
+## **Instalação e Contribuição no projeto** 
+
+1. Faça um **fork** do projeto.
+2. Realize o clone do projeto através do `git clone <link_do_fork_do_repositorio>`
+3. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+4. Instale as dependências necessárias à execução da API através do comando `npm install`
+5. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+6. Envie as suas alterações: `git push origin my-feature`
+
+> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
+
+## **Referências**
+
+- [Informações para licenças](http://escolhaumalicenca.com.br/licencas/mit/#) 
+- [Lista com emojis](https://gist.github.com/rxaviers/7360908)
+- [{reprograma} - Projeto Final](https://github.com/reprograma/on7-porto-s17-s18-projeto-livre)
+
+
+## **Agradecimentos**
+
+A palavra e o sentimento é **GRATIDÃO**:
+Ao Reprograma juntamente com o Porto Digital Minas por me proporcionar essa experiência de aprendizado e empoderamento. 
+A turma On-7 pela sororidade, empatia, companheirismo e ajuda durante essa jornada. Sem dúvida, o melhor grupo de mulheres(guerreiras) que já conheci na vida,verdadeiras inspirações. 
+A nossa facilitadora Raíssa, que acreditou em mim antes mesmo do curso e incentivou em cada passo.
+As nossas professoras, monitoras e orientadoras que sempre estavam presente para ajudar. 
+A minha família pela compreensão nos domingos que não estive presente e por me apoiarem mesmo sem entender o "que tanto faço nesse computador". 
+
+## **Licença**
+
+Este projeto está sob a licença [MIT](./LICENSE.md).
+
+---
+Criado com 💜 por **Jessica Montenegro** :computer:
+Entre em contato [![Linkedin Badge](https://img.shields.io/badge/-Jessica-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jambs/)](https://www.linkedin.com/in/jambs/)
