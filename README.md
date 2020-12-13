@@ -37,40 +37,49 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
 
 #### **Para os cursos**
 :heavy_check_mark: Cadastro de novos cursos
+
 :heavy_check_mark: Listar todos os cursos
 
 :heavy_check_mark: Atualizar um curso específico
 
 :heavy_check_mark: Remover um curso específico do banco de dados
 
-[x] Visualizar cursos por categoria (Ex:Bootcamp, Workshop, Graduação)
+:heavy_check_mark: Visualizar cursos por categoria (Ex:Bootcamp, Workshop, Graduação)
 
-[x] Visualizar cursos por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
+:heavy_check_mark: Visualizar cursos por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
 
-[x] Visualizar cursos por comunidade
+:heavy_check_mark: Visualizar cursos por comunidade
 
-[x] Visualizar cursos por nível 
+:heavy_check_mark: Visualizar cursos por nível 
   - Exploradora: primeiros passos em tecnologia
   - Mergulhadora: mergulha em área de interesse
   - Astronauta: voando para o mercado
   
-[x] Visualizar cursos por forma de pagamento
+:heavy_check_mark: Visualizar cursos por forma de pagamento
 
-[x] Visualizar curso por nível e forma de pagamento
+:heavy_check_mark: Visualizar curso por nível e forma de pagamento
 
 #### **Para as usuárias**
-[x] Login como usuária
-[x] Cadastrar nova usuária
-[x] Listar todas as usuárias
-[x] Atualizar dados de uma usuária específica
-[x] Remover cadastro de uma usuária específica
-[x] Filtrar cadastro de uma usuária específica
-[x] Filtrar usuárias por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
-[x] Filtrar usuárias por nível 
+:heavy_check_mark: Login como usuária
+
+:heavy_check_mark: Cadastrar nova usuária
+
+:heavy_check_mark: Listar todas as usuárias
+
+:heavy_check_mark: Atualizar dados de uma usuária específica
+
+:heavy_check_mark: Remover cadastro de uma usuária específica
+
+:heavy_check_mark: Filtrar cadastro de uma usuária específica
+
+:heavy_check_mark: Filtrar usuárias por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
+
+:heavy_check_mark: Filtrar usuárias por nível 
   - Exploradora: primeiros passos em tecnologia
   - Mergulhadora: mergulha em área de interesse
   - Astronauta: voando para o mercado
-[x] Editar nível de uma usuária específica
+  
+:heavy_check_mark: Editar nível de uma usuária específica
 
 ## **Tecnologias**
 
