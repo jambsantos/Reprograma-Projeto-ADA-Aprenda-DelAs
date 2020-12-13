@@ -2,7 +2,8 @@
  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs">
  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs">
 <img alt="github license" src="https://img.shields.io/github/license/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs?logo=MIT">
-<img alt="GitHub forks" src="https://img.shields.io/github/forks/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs?color=%23F29181&label=Open%20Source%20%F0%9F%92%99&logoColor=%23E9F9FB"></a>
+
+<a><img alt="GitHub forks" src="https://img.shields.io/github/forks/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs?color=%23F29181&label=Open%20Source%20%F0%9F%92%99&logoColor=%23E9F9FB"></a>
 
 <h1 align="center">
   <img src="./images/ADAcapa.png" alt="Ilustração da ADA lovelace e lema:criando seu legado na área de TI" width="800">
