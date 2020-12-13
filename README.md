@@ -150,10 +150,11 @@ Esta API está sendo escutada na `porta 8080` e para que todas as rotas possam s
 ## **Agradecimentos**
 
 A palavra e o sentimento é **GRATIDÃO**:
-Ao Reprograma juntamente com o Porto Digital Minas por me proporcionar essa experiência de aprendizado e empoderamento. 
-A turma On-7 pela sororidade, empatia, companheirismo e ajuda durante essa jornada. Sem dúvida, o melhor grupo de mulheres(guerreiras) que já conheci na vida,verdadeiras inspirações. 
-A nossa facilitadora Raíssa, que acreditou em mim antes mesmo do curso e incentivou em cada passo.
-As nossas professoras, monitoras e orientadoras que sempre estavam presente para ajudar. 
+
+Ao Reprograma juntamente com o Porto Digital Minas por me proporcionar essa experiência de aprendizado e empoderamento;
+A turma On-7 pela sororidade, empatia, companheirismo e ajuda durante essa jornada. Sem dúvida, o melhor grupo de mulheres(guerreiras) que já conheci na vida,verdadeiras inspirações;
+A nossa facilitadora Raíssa, que acreditou em mim antes mesmo do curso e incentivou em cada passo;
+As nossas professoras, monitoras e orientadoras que sempre estavam presente para ajudar;
 A minha família pela compreensão nos domingos que não estive presente e por me apoiarem mesmo sem entender o "que tanto faço nesse computador". 
 
 ## **Licença**
