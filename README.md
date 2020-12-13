@@ -36,35 +36,7 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
 ## **Funcionalidades**
 
 #### **Para os cursos**
-<<<<<<< HEAD
-✔️ Cadastro de novos cursos
-✔️ Listar todos os cursos
-✔️ Atualizar um curso específico
-✔️ Remover um curso específico do banco de dados
-✔️ Pesquisar cursos por categoria (Ex:Bootcamp, Workshop, Graduação)
-✔️ Pesquisar cursos por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
-✔️ Pesquisar cursos por comunidade
-✔️ Pesquisar cursos por nível 
-  - Exploradora: primeiros passos em tecnologia
-  - Mergulhadora: mergulha em área de interesse
-  - Astronauta: voando para o mercado
-✔️ Pesquisar cursos por forma de pagamento
-✔️ Pesquisar curso por nível e forma de pagamento
 
-#### **Para as usuárias**
- Login como usuária
-✔️ Cadastrar nova usuária
-✔️ Listar todas as usuárias
-✔️ Atualizar dados de uma usuária específica
-✔️ Remover cadastro de uma usuária específica
-✔️ Filtrar cadastro de uma usuária específica
-✔️ Filtrar usuárias por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
-✔️ Filtrar usuárias por nível 
-  - Exploradora: primeiros passos em tecnologia
-  - Mergulhadora: mergulha em área de interesse
-  - Astronauta: voando para o mercado
-✔️ Editar nível de uma usuária específica
-=======
 :heavy_check_mark: Cadastro de novos cursos
 
 :heavy_check_mark: Listar todos os cursos
