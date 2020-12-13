@@ -164,11 +164,12 @@ Este projeto está sob a licença [MIT](./LICENSE.md).
 
 ---
 <p align="center">
-Developed with 💜 by **Jessica Montenegro** :computer:
+Developed with 💜 by  <b>Jessica Montenegro</b>  :computer:
+</p> <p align="center"> </p>
 
-Entre em contato [![Linkedin Badge](https://img.shields.io/badge/-Jessica-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jambs/)](https://www.linkedin.com/in/jambs/)
-[![Gmail Badge](https://img.shields.io/badge/-jessica.aparecida@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jessica.aparecida@gmail.com)](jessica.aparecida@gmail.com)
-</p>
 <p align="center">
-</p>
+Entre em contato <img alt="in version" src="https://img.shields.io/badge/-Jessica-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jambs/"> <img alt="gmail version" src="https://img.shields.io/badge/-jessica.aparecida@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jessica.aparecida@gmail.com"> 
+</p> <p align="center"> </p>
+
+
 
