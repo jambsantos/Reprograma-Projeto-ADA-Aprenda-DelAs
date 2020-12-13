@@ -174,6 +174,22 @@ const getFieldCourses = (request, response) => {
   );
 };
 
+const getLevelCourses = (request, response) => {
+  const flag = request.query.level
+  courses.find(
+    { level: flag },
+    { name: 1, type: 1, field:1, host: 1, free:1, community: 1, link: 1, _id: 0 },
+    (err, course) => {
+      if (err) {
+        return response.status(500).send({ message: err.message });
+      } else if (course) {
+        return response.status(200).send(course);
+      }
+      response.status(404).send("Courses level not found!");
+    }
+  );
+};
+
 module.exports = {
   getAllCourses,
   createNewCourses,
@@ -183,5 +199,6 @@ module.exports = {
   getFieldCourses,
   getLevelFreeCourses,
   getFreeCourses,
-  getCommunityCourses
+  getCommunityCourses,
+  getLevelCourses
 };
