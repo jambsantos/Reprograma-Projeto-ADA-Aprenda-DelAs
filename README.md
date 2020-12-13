@@ -36,6 +36,7 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
 ## **Funcionalidades**
 
 #### **Para os cursos**
+<<<<<<< HEAD
 ✔️ Cadastro de novos cursos
 ✔️ Listar todos os cursos
 ✔️ Atualizar um curso específico
@@ -63,6 +64,52 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
   - Mergulhadora: mergulha em área de interesse
   - Astronauta: voando para o mercado
 ✔️ Editar nível de uma usuária específica
+=======
+:heavy_check_mark: Cadastro de novos cursos
+
+:heavy_check_mark: Listar todos os cursos
+
+:heavy_check_mark: Atualizar um curso específico
+
+:heavy_check_mark: Remover um curso específico do banco de dados
+
+:heavy_check_mark: Visualizar cursos por categoria (Ex:Bootcamp, Workshop, Graduação)
+
+:heavy_check_mark: Visualizar cursos por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
+
+:heavy_check_mark: Visualizar cursos por comunidade
+
+:heavy_check_mark: Visualizar cursos por nível 
+  - Exploradora: primeiros passos em tecnologia
+  - Mergulhadora: mergulha em área de interesse
+  - Astronauta: voando para o mercado
+  
+:heavy_check_mark: Visualizar cursos por forma de pagamento
+
+:heavy_check_mark: Visualizar curso por nível e forma de pagamento
+
+#### **Para as usuárias**
+:heavy_check_mark: Login como usuária
+
+:heavy_check_mark: Cadastrar nova usuária
+
+:heavy_check_mark: Listar todas as usuárias
+
+:heavy_check_mark: Atualizar dados de uma usuária específica
+
+:heavy_check_mark: Remover cadastro de uma usuária específica
+
+:heavy_check_mark: Filtrar cadastro de uma usuária específica
+
+:heavy_check_mark: Filtrar usuárias por área (Ex: FrontEnd, BackEnd, Dados, Mobile, Infra)
+
+:heavy_check_mark: Filtrar usuárias por nível 
+  - Exploradora: primeiros passos em tecnologia
+  - Mergulhadora: mergulha em área de interesse
+  - Astronauta: voando para o mercado
+  
+:heavy_check_mark: Editar nível de uma usuária específica
+>>>>>>> f536faf8c0328d89a29677f39e33de36108a23c6
 
 ## **Tecnologias**
 
