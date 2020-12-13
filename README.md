@@ -94,11 +94,12 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
 - Hospedagem do banco de dados na nuvem ![MongoDB](https://img.shields.io/badge/MongoDB-444444.svg?style=flat-square&logo=mongoDB&logoColor=green)
 - Deploy da aplicação na web![Heroku](https://img.shields.io/badge/Heroku-430098?align=style=flat-square&logo=heroku&logoColor=white)
 - Dependências para autenticação <img alt="Bcrypt version" src="https://img.shields.io/badge/bcrypt-5.0.0-green"> <img alt="Jsonwebtoken version" src="https://img.shields.io/badge/jsonwebtoken-8.5.1-green">
-- Outras dependências e bibliotecas <img alt="Mongoose version" src="https://img.shields.io/badge/mongoose-5.10.17-green"> <img alt="Nodemon version" src="https://img.shields.io/badge/nodemon-2.0.6-green">
+- Bibliotecas <img alt="Mongoose version" src="https://img.shields.io/badge/mongoose-5.10.17-green"> <img alt="Nodemon version" src="https://img.shields.io/badge/nodemon-2.0.6-green">
 
 ## **Features e rotas**
 
 Esta API está sendo escutada na `porta 8080` e para que todas as rotas possam ser acessadas localmente é necessário usar `http://localhost:8080/` antes dos endpoints de requisição.
+Haverá duas entidades na inserção de dados:
 
 ### **Manipulando os registros de cursos**
 | Feature                                                      | Método | Rota                        |
@@ -162,5 +163,11 @@ A minha família pela compreensão nos domingos que não estive presente e por m
 Este projeto está sob a licença [MIT](./LICENSE.md).
 
 ---
-Criado com 💜 por **Jessica Montenegro** :computer:
+<p align="center">
+Developed with 💜 by **Jessica Montenegro** :computer:
 Entre em contato [![Linkedin Badge](https://img.shields.io/badge/-Jessica-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jambs/)](https://www.linkedin.com/in/jambs/)
+[![Gmail Badge](https://img.shields.io/badge/-jessica.aparecida@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jessica.aparecida@gmail.com)](jessica.aparecida@gmail.com)
+</p>
+<p align="center">
+</p>
+
