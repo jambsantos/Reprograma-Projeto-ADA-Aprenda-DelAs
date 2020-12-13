@@ -3,7 +3,7 @@
  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs">
 <img alt="github license" src="https://img.shields.io/github/license/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs?logo=MIT">
 
-<a><img alt="GitHub forks" src="https://img.shields.io/github/forks/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs?color=%23F29181&label=Open%20Source%20%F0%9F%92%99&logoColor=%23E9F9FB"></a>
+<a><img alt="GitHub STARS" src="https://img.shields.io/github/stars/jambsantos/Reprograma-Projeto-ADA-Aprenda-DelAs?color=%23F29181&label=Open%20Source%20%F0%9F%92%99&logoColor=%23E9F9FB"></a>
 
 <h1 align="center">
   <img src="./images/ADAcapa.png" alt="Ilustração da ADA lovelace e lema:criando seu legado na área de TI" width="800">
@@ -11,13 +11,11 @@
 
 > A *ADA* tem a proposta de conectar minas e meninas que tem interesse na área de tecnologia com oficinas e cursos feitos por mulheres para mulheres. 
 
-> Status: **Pronto para o lançamento** 🚀
+> Status: **Lançado** 🚀
 
 ## **Apresentação**
 
-A *ADA - Aprenda DelAs* é o projeto de conclusão do bootcamp de Back-end da [{reprograma}](https://reprograma.com.br/), em parceria com o [projeto MINAs do Porto Digital](https://www.portodigital.org/capital-humano/iniciativas-para-a-diversidade/mulheres-em-inovacao-negocios-e-artes-minas). 
-
- A API *ADA* faz parte de um projeto maior que atualmente está participanda da incubação [Mind The Minas](https://forbes.com.br/tag/mind-the-minas/) do Porto Digital. 
+A *ADA - Aprenda DelAs* é o projeto de conclusão do bootcamp de Back-end da [{reprograma}](https://reprograma.com.br/), em parceria com o [projeto MINAs do Porto Digital](https://www.portodigital.org/capital-humano/iniciativas-para-a-diversidade/mulheres-em-inovacao-negocios-e-artes-minas). A API *ADA* faz parte de um projeto maior que atualmente está participanda da incubação [Mind The Minas](https://forbes.com.br/tag/mind-the-minas/) do Porto Digital. 
  
  Esta API é um banco de dados de cursos, oficinas e comunidades feito por mulheres para mulheres que tem como objetivo conectar minas com oportunidades na área de tecnologia e formentar a participação feminina no mercado, *criando assim seus legado na área de TI*. 
 
@@ -172,6 +170,7 @@ Developed with 💜 by  <b>Jessica Montenegro</b>  :computer:
 <p align="center">
 Entre em contato <img alt="in version" src="https://img.shields.io/badge/-Jessica-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jambs/"> <img alt="gmail version" src="https://img.shields.io/badge/-jessica.aparecida@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jessica.aparecida@gmail.com"> 
 </p> <p align="center"> </p>
+
 
 
 
