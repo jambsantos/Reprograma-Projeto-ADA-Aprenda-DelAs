@@ -36,13 +36,12 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
 ## **Funcionalidades**
 
 #### **Para os cursos**
-[x] Cadastro de novos cursos
+:heavy_check_mark: Cadastro de novos cursos
+:heavy_check_mark: Listar todos os cursos
 
-[x] Listar todos os cursos
+:heavy_check_mark: Atualizar um curso específico
 
-[x] Atualizar um curso específico
-
-[x] Remover um curso específico do banco de dados
+:heavy_check_mark: Remover um curso específico do banco de dados
 
 [x] Visualizar cursos por categoria (Ex:Bootcamp, Workshop, Graduação)
 
