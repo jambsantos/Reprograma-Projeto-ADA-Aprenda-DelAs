@@ -81,7 +81,6 @@ Os dados revelaram que 57% das entrevistadas sentem falta de orientação ou inf
   - Astronauta: voando para o mercado
   
 :heavy_check_mark: Editar nível de uma usuária específica
->>>>>>> f536faf8c0328d89a29677f39e33de36108a23c6
 
 ## **Tecnologias**
 
